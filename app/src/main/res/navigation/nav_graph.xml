@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         tools:layout="@layout/fragment_detail"
         android:name="com.kelmer.abn.foursquare.ui.detail.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment" >
+        <argument
+            android:name="venueId"
+            app:argType="string" />
+    </fragment>
 </navigation>

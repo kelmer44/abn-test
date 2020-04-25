@@ -11,12 +11,13 @@ object DIHelper {
         startKoin {
             androidLogger()
             androidContext(context)
-//            modules(
-//                listOf(
-//                    appModule,
-//                    netModule,
-//                    repositoryModule
-//                )
-//            )
+            modules(
+                listOf(
+                    appModule,
+                    netModule,
+                    useCaseModule,
+                    repositoryModule
+                )
+            )
         }
 }
