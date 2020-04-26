@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ContactView">
+        <attr name="cv_icon" format="reference"/>
+        <attr name="cv_text" format="string"/>
+    </declare-styleable>
+
+
+</resources>

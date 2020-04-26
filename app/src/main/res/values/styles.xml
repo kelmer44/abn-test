@@ -8,6 +8,8 @@
 
         <item name="android:colorBackground">@color/backgroundGray</item>
 
+
+
     </style>
 
 </resources>

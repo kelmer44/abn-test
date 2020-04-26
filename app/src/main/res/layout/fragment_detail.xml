@@ -51,16 +51,94 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="@dimen/double_spacing">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/venue_details_name"
-                android:layout_width="wrap_content"
+                style="?textAppearanceHeadline6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/full_names" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/venue_details_rating"
+                style="?ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:max="10"
+                android:numStars="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/venue_details_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/double_spacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_name"
+                tools:text="@tools:sample/full_names" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/single_spacing"
+                android:background="?colorControlNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_address" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/venue_details_description"
+                style="?textAppearanceBody2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/double_spacing"
+                android:layout_marginBottom="@dimen/double_spacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator"
+                tools:text="@tools:sample/lorem" />
+
+            <com.kelmer.abn.foursquare.ui.customview.contactview.ContactView
+                android:id="@+id/venue_details_contactinfo_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/double_spacing"
+                app:cv_icon="@drawable/ic_twitter"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_description"
+                tools:cv_text="@tools:sample/full_names" />
+
+            <com.kelmer.abn.foursquare.ui.customview.contactview.ContactView
+                android:id="@+id/venue_details_contactinfo_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                android:layout_marginTop="@dimen/single_spacing"
+                app:cv_icon="@drawable/ic_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_contactinfo_twitter"
+                tools:cv_text="@tools:sample/full_names" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
