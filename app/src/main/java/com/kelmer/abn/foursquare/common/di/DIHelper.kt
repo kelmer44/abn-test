@@ -16,7 +16,8 @@ object DIHelper {
                     appModule,
                     netModule,
                     useCaseModule,
-                    repositoryModule
+                    repositoryModule,
+                    dbModule
                 )
             )
         }

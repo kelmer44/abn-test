@@ -4,12 +4,16 @@ import com.kelmer.abn.foursquare.data.api.VenueApi
 import com.kelmer.abn.foursquare.data.converter.PhotoConverter
 import com.kelmer.abn.foursquare.data.converter.VenueConverter
 import com.kelmer.abn.foursquare.data.converter.VenueDetailsConverter
+import com.kelmer.abn.foursquare.data.db.dao.VenueDao
 import com.kelmer.abn.foursquare.data.db.model.Venue
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
 import com.kelmer.abn.foursquare.domain.model.LatLon
 import io.reactivex.Single
 
-class VenueRepositoryImpl(private val venueApi: VenueApi) : VenueRepository {
+class VenueRepositoryImpl(
+    private val venueApi: VenueApi,
+    private val venueDao: VenueDao
+) : VenueRepository {
 
     private val venueConverter = VenueConverter()
     private val venueDetailsConverter = VenueDetailsConverter(PhotoConverter())
@@ -31,6 +35,9 @@ class VenueRepositoryImpl(private val venueApi: VenueApi) : VenueRepository {
                 venueApi.getVenuePhotos(id).map { it.response }.map { photos ->
                     venueDetailsConverter.convert(detail.venue, photos.photos.items)
                 }
+            }
+            .doOnSuccess {
+                venueDao.saveVenue(it)
             }
     }
 

@@ -11,8 +11,7 @@ val netModule = module {
 
     single { AuthInterceptor() }
     single { HttpClientProvider.createHttpClient(get()).build() }
-    single { ApiServiceProvider.createRetrofit(get()) }
-
+    single { ApiServiceProvider.createRetrofit(httpClient = get(), moshi = get()) }
     single<VenueApi> (named("retrofit")){ ApiServiceProvider.getService(get()) }
     single<VenueApi> (named("mock")){ VenueApiMock() }
 }

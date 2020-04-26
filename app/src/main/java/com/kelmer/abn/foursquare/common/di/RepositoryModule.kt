@@ -5,12 +5,14 @@ import com.kelmer.abn.foursquare.data.repository.VenueRepositoryImpl
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
-val repositoryModule = module{
+val repositoryModule = module {
 
-    single<VenueRepository>{
-            VenueRepositoryImpl(
-                get(named("mock"))
-//                        get(named("retrofit"))
-            )
+    single<VenueRepository> {
+        VenueRepositoryImpl(
+            venueApi = get(named("mock")),
+//                        get(named("retrofit")),
+            venueDao = get()
+
+        )
     }
 }
