@@ -14,8 +14,6 @@ import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
 import com.kelmer.abn.foursquare.data.db.model.Venue
 import com.kelmer.abn.foursquare.domain.model.LatLon
-import com.kelmer.abn.foursquare.ui.detail.DetailFragment
-import com.kelmer.abn.foursquare.ui.detail.DetailFragmentArgs
 import kotlinx.android.synthetic.main.fragment_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -43,6 +41,8 @@ class ListFragment : Fragment(R.layout.fragment_list) {
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
+                search_prompt.isVisible = newText.length < 3
+                venues_list.isVisible = newText.length >= 3
                 if (newText.isNotEmpty() && newText.length >= 3) {
                     viewModel.doSearch(newText, LatLon(52.37, 4.89))
                 }
@@ -59,6 +59,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
                 },
                 onSuccess = {
                     venueAdapter.updateVenues(it)
+                    search_empty_state.isVisible = it.isEmpty()
                 })
         }
     }

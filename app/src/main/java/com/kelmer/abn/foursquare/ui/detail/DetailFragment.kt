@@ -35,11 +35,16 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         detail_toolbar.setupWithNavController(navController)
         viewModel.getVenue(args.venueId).observe(viewLifecycleOwner) { resource ->
+            shimmer_detail.isVisible = resource.inProgress
             resource.resolve(
                 onError = {
                     context?.handleError(it)
+                    detail_error.isVisible = true
+                    detail_data.isVisible = false
                 },
                 onSuccess = {
+                    detail_error.isVisible = false
+                    detail_data.isVisible = true
                     fillInDetails(it)
                 })
         }

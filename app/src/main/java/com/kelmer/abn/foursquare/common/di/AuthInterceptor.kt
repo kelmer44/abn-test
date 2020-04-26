@@ -6,14 +6,14 @@ import okhttp3.Request
 import okhttp3.Response
 
 
-class AuthInterceptor : Interceptor {
+class AuthInterceptor(private val clientId: String, private val clientSecret: String) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val original: Request = chain.request()
         val originalHttpUrl: HttpUrl = original.url
 
         val url = originalHttpUrl.newBuilder()
-            .addQueryParameter("client_id", "AGNZQ4BQSBXQMT0ZB20E1FOGOMCFOM2XZRUPQKDSBOM1Z1BI")
-            .addQueryParameter("client_secret", "PPJ2IPSPUVNKSWML52NEYRQL0T5VYKDAGSYOUWRMKWDDM5RA")
+            .addQueryParameter("client_id", clientId)
+            .addQueryParameter("client_secret", clientSecret)
             .addQueryParameter("v", "20200420")
             .build()
 

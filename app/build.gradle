@@ -79,7 +79,10 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.5"
     implementation "androidx.room:room-rxjava2:2.2.5"
 
-//Debug
+    //shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //Debug
     implementation 'com.facebook.stetho:stetho:1.5.1'
     implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
 

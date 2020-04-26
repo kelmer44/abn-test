@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:shimmer_auto_start="true"
+    app:shimmer_direction="left_to_right"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/double_spacing">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/venue_details_name"
+            style="?textAppearanceHeadline6"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/venue_details_rating"
+            style="?ratingBarStyleSmall"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:background="@color/backgroundGray"
+            android:max="10"
+            android:numStars="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/venue_details_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/venue_details_address"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/gray"
+            android:layout_marginTop="@dimen/double_spacing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/venue_details_name"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

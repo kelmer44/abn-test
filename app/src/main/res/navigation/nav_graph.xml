@@ -16,9 +16,8 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        tools:layout="@layout/fragment_detail"
         android:name="com.kelmer.abn.foursquare.ui.detail.DetailFragment"
-        android:label="DetailFragment" >
+        tools:layout="@layout/fragment_detail">
         <argument
             android:name="venueId"
             app:argType="string" />
