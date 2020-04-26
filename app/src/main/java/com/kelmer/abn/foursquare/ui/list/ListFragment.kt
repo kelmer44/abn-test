@@ -3,6 +3,7 @@ package com.kelmer.abn.foursquare.ui.list
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import androidx.navigation.NavController
@@ -50,6 +51,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         })
 
         viewModel.getVenues().observe(viewLifecycleOwner) { resource ->
+            venues_list_progress.isVisible = resource.inProgress
             resource.resolve(
                 onError = {
                     context?.handleError(it)

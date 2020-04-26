@@ -1,5 +1,6 @@
 package com.kelmer.abn.foursquare.common.di.provider
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.kelmer.abn.foursquare.BuildConfig
 import com.kelmer.abn.foursquare.common.di.AuthInterceptor
 import okhttp3.Interceptor
@@ -13,7 +14,6 @@ private const val WRITE_TIMEOUT = 30L
 
 object HttpClientProvider {
 
-
     fun createHttpClient(authInterceptor: AuthInterceptor): OkHttpClient.Builder {
         val builder =
             OkHttpClient.Builder()
@@ -23,7 +23,7 @@ object HttpClientProvider {
         if (BuildConfig.DEBUG) {
             val httpLoggingInterceptor = HttpLoggingInterceptor()
             httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-            builder.addInterceptor(httpLoggingInterceptor)
+            builder.addInterceptor(httpLoggingInterceptor).addNetworkInterceptor(StethoInterceptor())
         }
 
         builder.addInterceptor(authInterceptor)

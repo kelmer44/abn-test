@@ -10,9 +10,7 @@ import com.kelmer.abn.foursquare.domain.usecase.GetVenuesUseCase
 class ListViewModel(private val getVenuesUseCase: GetVenuesUseCase) :
     UseCaseViewModel(getVenuesUseCase) {
 
-
     private val _venues = MutableLiveData<Resource<List<Venue>>>()
-
     fun getVenues() = _venues
 
     fun doSearch(query: String, location: LatLon) {

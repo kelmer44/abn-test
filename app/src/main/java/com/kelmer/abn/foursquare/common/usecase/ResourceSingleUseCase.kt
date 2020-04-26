@@ -6,7 +6,7 @@ import io.reactivex.rxkotlin.subscribeBy
 import com.kelmer.abn.foursquare.common.resource.toResource
 import com.kelmer.abn.foursquare.common.util.SchedulerProvider
 
-abstract class ResourceSingleUseCase<T : Any, in Params>(protected val schedulerProvider: SchedulerProvider) : UseCase() {
+abstract class ResourceSingleUseCase<T : Any, in Params>(private val schedulerProvider: SchedulerProvider) : UseCase() {
     internal abstract fun buildUseCase(params: Params): Single<T>
 
     fun execute(

@@ -12,6 +12,8 @@ class VenueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(venue: Venue, listener: VenueListAdapter.VenueListener) = with(itemView) {
         item_venue_name.text = venue.name
+
+        item_venue_location.text = venue.location
         item_venue_root.setOnClickListener{
             listener.onClick(venue)
         }

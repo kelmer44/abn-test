@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.kelmer.abn.foursquare.R
+import com.kelmer.abn.foursquare.common.glide.GlideApp
 import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
@@ -22,6 +23,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     }
 
     private val args: DetailFragmentArgs by navArgs()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,5 +40,9 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     private fun fillInDetails(venue: VenueDetails) = with(venue) {
         venue_details_name.text = this.name
+        GlideApp.with(detail_appbar_backdrop).load(venue.photos.first().url)
+            .centerCrop().into(detail_appbar_backdrop)
+        detail_toolbar.title = venue.name
     }
+
 }
