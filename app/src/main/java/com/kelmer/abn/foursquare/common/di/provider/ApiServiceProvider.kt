@@ -1,5 +1,6 @@
 package com.kelmer.abn.foursquare.common.di.provider
 
+import com.kelmer.abn.foursquare.data.api.mock.VenueApiMock
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

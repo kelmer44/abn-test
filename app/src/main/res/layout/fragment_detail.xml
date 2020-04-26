@@ -5,26 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:clipToPadding="false">
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/detail_appbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_appbar_height"
+        android:fitsSystemWindows="true"
         tools:visibility="visible">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/detail_collapsing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+            app:contentScrim="?colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
             <ImageView
                 android:id="@+id/detail_appbar_backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/detail_appbar_height"
+                android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +45,8 @@
                 android:layout_height="?android:attr/actionBarSize"
                 android:background="@android:color/transparent"
                 app:layout_collapseMode="pin"
-                app:layout_scrollFlags="scroll|enterAlways|snap" />
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -92,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/single_spacing"
-                android:background="?colorControlNormal"
+                android:background="?colorControlHighlight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/venue_details_address" />
@@ -110,19 +118,31 @@
                 app:layout_constraintTop_toBottomOf="@id/separator"
                 tools:text="@tools:sample/lorem" />
 
+
+            <com.kelmer.abn.foursquare.ui.customview.gallery.GalleryView
+                android:id="@+id/venue_details_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/venue_gallery_height"
+                android:layout_marginTop="@dimen/single_spacing"
+                android:layout_marginBottom="@dimen/single_spacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_description"
+                />
+
             <com.kelmer.abn.foursquare.ui.customview.contactview.ContactView
                 android:id="@+id/venue_details_contactinfo_twitter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/double_spacing"
-                app:cv_icon="@drawable/ic_twitter"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="?selectableItemBackground"
+                app:cv_icon="@drawable/ic_twitter"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/venue_details_description"
+                app:layout_constraintTop_toBottomOf="@id/venue_details_gallery"
                 tools:cv_text="@tools:sample/full_names" />
 
             <com.kelmer.abn.foursquare.ui.customview.contactview.ContactView
@@ -130,10 +150,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="@dimen/single_spacing"
+                android:background="?selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="?selectableItemBackground"
-                android:layout_marginTop="@dimen/single_spacing"
                 app:cv_icon="@drawable/ic_phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

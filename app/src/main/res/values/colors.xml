@@ -1,8 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+<?xml version="1.0" encoding="utf-8"?><!--
+~ Copyright (C) 2019 The Android Open Source Project
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~      http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
 
+<resources>
+
+    <!--Color-->
+
+    <!--Material uses an organized approach to applying color by -->
+    <!--providing a set of attributes which define semantically named -->
+    <!--colors for generalized UI concepts such as backgrounds, -->
+    <!--surfaces, type and icons. Using these attributes throughout -->
+    <!--your app makes it easy to change a single color, or the -->
+    <!--entire theme, and have those changes cascade through the interface.-->
+
+    <!--Color is customized by overriding Material Components color -->
+    <!--attributes with custom color values. In this project, your theme’s -->
+    <!--color attributes are already overridden with default values -->
+    <!--defined in this file, colors.xml. This file holds the color palette -->
+    <!--for both light and dark themes of the Material baseline (default) -->
+    <!--theme. Next to each color is a comment describing the semantic theme -->
+    <!--color attribute which the palette color maps to.-->
+
+    <!--Replace the colors here with your own brand's palette and ensure -->
+    <!--they are applied as desired in both light and dark theme -->
+    <!--(values/themes.xml and values-night/themes.xml). For more -->
+    <!--information on color palettes and their application color -->
+    <!--theme attributes, see https://www.youtube.com/watch?v=Owkf8DhAOSo-->
+
+    <!--Color palette-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="scarlet">#D0021B</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
     <color name="backgroundGray">#f9f9f9</color>
+
+
+    <!-- GRAYS - TO BE REVIEWED -->
+    <color name="steel">#6f7b91</color>
+    <color name="label">#113260</color>
+    <color name="lightGray">#eeeeee</color>
+    <color name="gray">#d7d7d7</color>
+    <color name="shimmer">@color/gray</color>
+
+    <!-- marker colors -->
+    <color name="secondary900">#23063F</color>
+    <color name="secondary800">#330B51</color>
+    <color name="secondary700">#3B0E5B</color>
+    <color name="secondary600">#441266</color>
+    <color name="secondary500">#4B146E</color>
+    <color name="secondary400">#663784</color>
+    <color name="secondary300">#815B9A</color>
+    <color name="secondary200">#A58AB7</color>
+    <color name="secondary100">#C9B9D4</color>
+    <color name="secondary050">#E9E3EE</color>
+
+    <color name="primary900">#0C5748</color>
+    <color name="primary800">#156A5B</color>
+    <color name="primary700">#1A7465</color>
+    <color name="primary600">#1F7F70</color>
+    <color name="primary500">#238778</color>
+    <color name="primary400">#44998C</color>
+    <color name="primary300">#65ABA1</color>
+    <color name="primary200">#91C3BC</color>
+    <color name="primary100">#BDDBD7</color>
+    <color name="primary050">#E5F1EF</color>
+
+
+
+    <color name="primary">@color/primary500</color>
+    <color name="primaryVariant">@color/primary700</color>
+
+
+    <color name="secondary">@color/secondary200</color>
+    <color name="secondaryVariant">@color/secondary500</color>
+
+
+    <color name="background">@color/backgroundGray</color>
+    <color name="surface">@color/white</color>
+    <color name="error">@color/scarlet</color>
+    <color name="onPrimary">@color/white</color>
+    <color name="onSecondary">@color/black</color>
+    <color name="onBackground">@color/black</color>
+    <color name="onSurface">@color/black</color>
+    <color name="onError">@color/white</color>
+
+
 </resources>

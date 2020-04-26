@@ -10,11 +10,13 @@ import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.setupWithNavController
 import com.kelmer.abn.foursquare.R
 import com.kelmer.abn.foursquare.common.glide.GlideApp
 import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
+import com.kelmer.abn.foursquare.ui.customview.gallery.GalleryImage
 import kotlinx.android.synthetic.main.fragment_detail.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,6 +33,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        detail_toolbar.setupWithNavController(navController)
         viewModel.getVenue(args.venueId).observe(viewLifecycleOwner) { resource ->
             resource.resolve(
                 onError = {
@@ -55,6 +58,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
             detail_appbar_backdrop.setImageResource(R.drawable.ic_no_photo)
         }
         detail_toolbar.title = venue.name
+
         venue_details_description.text = venue.description
         venue_details_contactinfo_phone.setText(venue.contactInfo.phone)
         venue_details_contactinfo_phone.setOnClickListener {
@@ -68,6 +72,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         venue_details_rating.rating = venue.rating
         venue_details_address.text = venue.formattedAddress
 
+        venue_details_gallery.setImages(venue.photos.map { GalleryImage(it.url) })
     }
 
     private fun openUrl(url: String){

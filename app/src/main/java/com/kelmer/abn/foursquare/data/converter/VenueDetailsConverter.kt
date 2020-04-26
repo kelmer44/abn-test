@@ -22,7 +22,7 @@ class VenueDetailsConverter(private val photoConverter: PhotoConverter) :
             description = input1.description?:"",
             contactInfo = mapContactData(input1.contact),
             locationInfo = mapLocationData(input1.location),
-            formattedAddress = resolveLocation(input1)
+            formattedAddress = LocationConverter.resolveLocation(input1.location)
             )
     }
 
@@ -34,18 +34,5 @@ class VenueDetailsConverter(private val photoConverter: PhotoConverter) :
         return LocationInfo(input.address?:"", input.city ?: "", input.country ?: "")
     }
 
-    private fun resolveLocation(input: VenueDetailData): String {
-        return if(!input.location.address.isNullOrBlank()){
-            "${input.location.address}, ${input.location.city}"
-        } else if(!input.location.city.isNullOrBlank()){
-            input.location.city
-        } else if(!input.location.state.isNullOrBlank()){
-            input.location.state
-        } else if(!input.location.country.isNullOrBlank()) {
-            input.location.country
-        } else {
-            ""
-        }
-    }
 
 }

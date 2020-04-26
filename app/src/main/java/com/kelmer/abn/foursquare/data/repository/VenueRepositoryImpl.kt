@@ -8,7 +8,6 @@ import com.kelmer.abn.foursquare.data.db.model.Venue
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
 import com.kelmer.abn.foursquare.domain.model.LatLon
 import io.reactivex.Single
-import io.reactivex.functions.BiFunction
 
 class VenueRepositoryImpl(private val venueApi: VenueApi) : VenueRepository {
 
@@ -24,11 +23,15 @@ class VenueRepositoryImpl(private val venueApi: VenueApi) : VenueRepository {
     override fun getVenue(id: String): Single<VenueDetails> {
         return venueApi.getVenue(id).map {
             it.response
-        }.flatMap {detail ->
-            venueApi.getVenuePhotos(id).map { it.response }.map { photos ->
-                venueDetailsConverter.convert(detail.venue, photos.photos.items)
-            }
         }
+//            .map { detail ->
+//                venueDetailsConverter.convert(detail.venue, listOf())
+//            }
+            .flatMap { detail ->
+                venueApi.getVenuePhotos(id).map { it.response }.map { photos ->
+                    venueDetailsConverter.convert(detail.venue, photos.photos.items)
+                }
+            }
     }
 
 }

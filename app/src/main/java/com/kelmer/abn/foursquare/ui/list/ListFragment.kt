@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.kelmer.abn.foursquare.R
 import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
@@ -33,8 +34,8 @@ class ListFragment : Fragment(R.layout.fragment_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         venues_list.adapter = venueAdapter
+        list_toolbar.setupWithNavController(navController)
 
         list_search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
