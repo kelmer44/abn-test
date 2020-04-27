@@ -15,3 +15,4 @@
 See [https://developer.foursquare.com/docs/announcements/#start-up-tier-launch](https://developer.foursquare.com/docs/announcements/#start-up-tier-launch)
 - Only `VenueDetails` is cached since caching search results is not very useful
 - Location has been hardcoded to Amsterdam for simplicity
+- Also for simplicity, Photo list has been modeled as a json string within the Room `Venues` table.
