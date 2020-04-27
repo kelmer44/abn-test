@@ -8,5 +8,9 @@ import com.kelmer.abn.foursquare.R
 
 fun Context.handleError(it: Throwable, message: String = getString(R.string.error_generic)){
     Log.e("ERRORHANDLER", message, it)
-    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    var msg = message
+    if(it is NetworkInteractor.NetworkUnavailableException){
+        msg = getString(R.string.error_no_internet)
+    }
+    Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 }

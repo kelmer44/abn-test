@@ -5,4 +5,5 @@
     <string name="search_no_results">There are no results with the specified query</string>
     <string name="search_prompt">Enter a search term</string>
     <string name="detail_error">There was an error retrieving this venue!</string>
+    <string name="error_no_internet">Please enable your internet connection!</string>
 </resources>
