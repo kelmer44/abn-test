@@ -29,5 +29,5 @@ val netModule = module {
     single { HttpClientProvider.createHttpClient(get()).build() }
     single { ApiServiceProvider.createRetrofit(httpClient = get(), moshi = get()) }
     single<VenueApi>(named(QUALIFIER_API_RETROFIT)) { ApiServiceProvider.getService(get()) }
-    single<VenueApi>(named(QUALIFIER_API_MOCK)) { VenueApiMock() }
+    single<VenueApi>(named(QUALIFIER_API_MOCK)) { VenueApiMock(networkInteractor = get()) }
 }

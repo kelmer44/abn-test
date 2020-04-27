@@ -9,8 +9,8 @@ val repositoryModule = module {
 
     single<VenueRepository> {
         VenueRepositoryImpl(
-            venueApi = get(named(QUALIFIER_API_MOCK)),
-//                        get(named(QUALIFIER_API_RETROFIT)),
+//            venueApi = get(named(QUALIFIER_API_MOCK)),
+                        get(named(QUALIFIER_API_RETROFIT)),
             venueDao = get()
 
         )

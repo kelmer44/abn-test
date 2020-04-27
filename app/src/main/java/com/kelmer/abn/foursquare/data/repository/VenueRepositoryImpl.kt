@@ -20,8 +20,6 @@ class VenueRepositoryImpl(
     private val venueDao: VenueDao
 ) : VenueRepository, KoinComponent {
 
-    private val networkInteractor by inject<NetworkInteractor>()
-
     private val venueConverter = VenueConverter()
     private val venueDetailsConverter = VenueDetailsConverter(PhotoConverter())
 
@@ -35,17 +33,13 @@ class VenueRepositoryImpl(
     override fun getVenue(id: String): Flowable<VenueDetails> {
         val remoteVenue =
             venueApi.getVenue(id)
-                .compose(networkInteractor.single())
-//                .flatMap { detail ->
-//                    venueApi.getVenuePhotos(id).map { it.response }.map { photos ->
-//                        venueDetailsConverter.convert(detail.response.venue, photos.photos.items)
-//                    }
-//                }
-                .map {
-                    venueDetailsConverter.convert(it.response.venue, emptyList())
+                .flatMap { detail ->
+                    venueApi.getVenuePhotos(id).map { it.response }.map { photos ->
+                        venueDetailsConverter.convert(detail.response.venue, photos.photos.items)
+                    }
                 }
                 .doOnError {
-                    Log.e("REPO", "Error!: ${it.message}!")
+                     Log.e("NO NETWORK", "Error!: ${it}!")
                 }
                 .doOnSuccess {
                     venueDao.saveVenue(it)
@@ -53,10 +47,10 @@ class VenueRepositoryImpl(
         val localVenue = venueDao.getVenue(id)
         return Single.concat(
             localVenue.doOnSuccess {
-                Log.i("REPO", "From local $it")
+                Log.i("NO NETWORK", "From local $it")
             },
             remoteVenue.doOnSuccess {
-                Log.i("REPO", "From remote $it")
+                Log.i("NO NETWORK", "From remote $it")
             }
         )
     }

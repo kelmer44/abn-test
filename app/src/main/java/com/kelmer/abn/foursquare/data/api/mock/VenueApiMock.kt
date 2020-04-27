@@ -1,5 +1,6 @@
 package com.kelmer.abn.foursquare.data.api.mock
 
+import com.kelmer.abn.foursquare.common.util.NetworkInteractor
 import com.kelmer.abn.foursquare.data.api.VenueApi
 import com.kelmer.abn.foursquare.data.api.model.detail.VenueListResponse
 import com.kelmer.abn.foursquare.data.api.model.list.VenueDetailData
@@ -10,11 +11,14 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.ResponseBody.Companion.toResponseBody
 import retrofit2.HttpException
 import retrofit2.Response
+import java.net.UnknownHostException
 
-class VenueApiMock : VenueApi {
+/**
+ * we inject the network interactor to mock the behavior of not having a connection
+ */
+class VenueApiMock(val networkInteractor: NetworkInteractor) : VenueApi {
 
     private val photos = MockUtils.mockedPhotos
-
 
     private val venueMap: Map<String, VenueDetailData> = MockUtils.mockedVenues.map {
         it.id to it
@@ -30,7 +34,10 @@ class VenueApiMock : VenueApi {
 
     override fun getVenue(id: String): Single<VenueDetailResponse> {
         val venue = venueMap[id]
-        return if (venue != null)
+        return if(!networkInteractor.hasNetworkConnection()){
+            Single.error(UnknownHostException())
+        }
+        else if (venue != null)
             MockUtils.delayedSingle(MockUtils.buildVenueDetailResponse(venue))
         else {
             val httpException = HttpException(

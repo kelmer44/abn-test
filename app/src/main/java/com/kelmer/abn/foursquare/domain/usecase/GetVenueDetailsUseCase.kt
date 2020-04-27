@@ -15,6 +15,7 @@ open class GetVenueDetailsUseCase(private val venueRepository: VenueRepository, 
 
     override fun buildUseCase(params: Params): Flowable<VenueDetails> {
         return venueRepository.getVenue(params.id)
+            .compose(noNetwork())
     }
 
 }

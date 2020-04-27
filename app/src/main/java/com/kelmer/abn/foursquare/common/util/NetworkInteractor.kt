@@ -8,8 +8,8 @@ interface NetworkInteractor {
 
     fun hasNetworkConnectionCompletable(): Completable
 
-    class NetworkUnavailableException : Throwable("No network available!")
 
+    class NetworkUnavailableException : Throwable("No network available!")
 
     fun <T> flowable() : FlowableTransformer<T, T> {
         return  FlowableTransformer{observable->
