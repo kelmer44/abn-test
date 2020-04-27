@@ -15,11 +15,9 @@ import org.koin.core.inject
 import java.net.UnknownHostException
 import java.util.concurrent.TimeUnit
 
-abstract class UseCase : KoinComponent {
+abstract class UseCase(private val networkInteractor: NetworkInteractor) : KoinComponent {
     private var lastDisposable: Disposable? = null
     private val disposables = CompositeDisposable()
-
-    private val networkInteractor by inject<NetworkInteractor>()
 
     fun disposeLast() {
         lastDisposable?.let {
@@ -46,14 +44,11 @@ abstract class UseCase : KoinComponent {
                     BiFunction<Throwable, Int, Int> { error: Throwable, retryCount: Int ->
                         if (noNetworkAvailableError(error, networkInteractor)) {
                             if (retryCount > RETRIES_LIMIT) {
-                                Log.e("NO NETWORK", "Reacehd max of retries! throwing error down the chain : $error")
                                 throw error
                             } else {
-                                Log.e("NO NETWORK", "Retry number $retryCount")
                                 retryCount
                             }
                         } else {
-                            Log.e("NO NETWORK", "Not a network unavailable error : $error")
                             throw error
                         }
 

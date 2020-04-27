@@ -2,6 +2,7 @@ package com.kelmer.abn.foursquare.domain.usecase
 
 import com.kelmer.abn.foursquare.common.resource.Resource
 import com.kelmer.abn.foursquare.common.usecase.UseCase
+import com.kelmer.abn.foursquare.common.util.NetworkInteractor
 import com.kelmer.abn.foursquare.data.api.mock.MockUtils
 import com.kelmer.abn.foursquare.data.converter.VenueConverter
 import com.kelmer.abn.foursquare.data.db.model.Venue
@@ -41,9 +42,14 @@ class GetVenuesUseCaseTest {
             on { getVenues(any(), any()) }
                 .doReturn(Single.error(Exception("listError")))
         }
+        val mockNetworkInteractor: NetworkInteractor = mock{
+            on {
+                hasNetworkConnection()
+            }.doReturn(true)
+        }
 
         val getVenuesUseCase =
-            GetVenuesUseCase(mockRepository, schedulers)
+            GetVenuesUseCase(mockRepository, schedulers, mockNetworkInteractor)
                 .apply { disposables.add(this) }
 
         getVenuesUseCase.execute(
@@ -70,9 +76,13 @@ class GetVenuesUseCaseTest {
             on { getVenues(any(), any()) }
                 .doReturn(Single.just(listOf(venue1, venue2)))
         }
-
+        val mockNetworkInteractor: NetworkInteractor = mock{
+            on {
+                hasNetworkConnection()
+            }.doReturn(true)
+        }
         val getVenuesUseCase =
-            GetVenuesUseCase(mockRepository, schedulers)
+            GetVenuesUseCase(mockRepository, schedulers, mockNetworkInteractor)
                 .apply { disposables.add(this) }
 
         getVenuesUseCase.execute(

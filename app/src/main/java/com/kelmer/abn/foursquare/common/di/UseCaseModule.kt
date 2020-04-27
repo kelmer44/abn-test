@@ -8,14 +8,16 @@ val useCaseModule = module {
     factory {
         GetVenuesUseCase(
             venueRepository = get(),
-            schedulerProvider = get()
+            schedulerProvider = get(),
+            networkInteractor = get()
         )
     }
 
     factory {
         GetVenueDetailsUseCase(
             venueRepository = get(),
-            schedulerProvider = get()
+            schedulerProvider = get(),
+            networkInteractor = get()
         )
     }
 
