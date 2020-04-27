@@ -3,18 +3,17 @@ package com.kelmer.abn.foursquare.ui.detail
 import androidx.lifecycle.MutableLiveData
 import com.kelmer.abn.foursquare.common.resource.Resource
 import com.kelmer.abn.foursquare.common.viewmodel.UseCaseViewModel
-import com.kelmer.abn.foursquare.data.db.model.Venue
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
-import com.kelmer.abn.foursquare.domain.usecase.GetVenueUseCase
+import com.kelmer.abn.foursquare.domain.usecase.GetVenueDetailsUseCase
 
-class DetailViewModel(private val getVenueUseCase: GetVenueUseCase) :
-    UseCaseViewModel(getVenueUseCase) {
+class DetailViewModel(private val getVenueDetailsUseCase: GetVenueDetailsUseCase) :
+    UseCaseViewModel(getVenueDetailsUseCase) {
 
 
     private val _venues = MutableLiveData<Resource<VenueDetails>>()
     fun getVenue(id: String): MutableLiveData<Resource<VenueDetails>> {
-        getVenueUseCase.execute(
-            GetVenueUseCase.Params(
+        getVenueDetailsUseCase.execute(
+            GetVenueDetailsUseCase.Params(
                 id
             ),
             onNext = {

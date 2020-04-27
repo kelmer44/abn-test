@@ -1,6 +1,6 @@
 package com.kelmer.abn.foursquare.common.di
 
-import com.kelmer.abn.foursquare.domain.usecase.GetVenueUseCase
+import com.kelmer.abn.foursquare.domain.usecase.GetVenueDetailsUseCase
 import com.kelmer.abn.foursquare.domain.usecase.GetVenuesUseCase
 import org.koin.dsl.module
 
@@ -13,7 +13,7 @@ val useCaseModule = module {
     }
 
     factory {
-        GetVenueUseCase(
+        GetVenueDetailsUseCase(
             venueRepository = get(),
             schedulerProvider = get()
         )

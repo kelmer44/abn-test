@@ -1,0 +1,559 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5ea6a3d0618f43001cb699d9"
+  },
+  "response": {
+    "venue": {
+      "id": "559e1b50498e072c8d7261a4",
+      "name": "The Hoxton",
+      "contact": {
+        "phone": "+31208885555",
+        "formattedPhone": "+31 20 888 5555",
+        "twitter": "thehoxton",
+        "facebook": "1033302816698176",
+        "facebookUsername": "thehoxtonamsterdam",
+        "facebookName": "The Hoxton, Amsterdam"
+      },
+      "location": {
+        "address": "Herengracht 255",
+        "lat": 52.3718626,
+        "lng": 4.8874866,
+        "labeledLatLngs": [
+          {
+            "label": "display",
+            "lat": 52.3718626,
+            "lng": 4.8874866
+          }
+        ],
+        "postalCode": "1016 BJ",
+        "cc": "NL",
+        "city": "Amsterdam",
+        "state": "Noord-Holland",
+        "country": "Nederland",
+        "formattedAddress": [
+          "Herengracht 255",
+          "1016 BJ Amsterdam",
+          "Nederland"
+        ]
+      },
+      "canonicalUrl": "https://foursquare.com/v/the-hoxton/559e1b50498e072c8d7261a4",
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d1fa931735",
+          "name": "Hotel",
+          "pluralName": "Hotels",
+          "shortName": "Hotel",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "tipCount": 88
+      },
+      "url": "https://thehoxton.com/holland/amsterdam/hotels",
+      "likes": {
+        "count": 484,
+        "groups": [
+          {
+            "type": "others",
+            "count": 484,
+            "items": []
+          }
+        ],
+        "summary": "484 Likes"
+      },
+      "dislike": false,
+      "ok": false,
+      "rating": 8.6,
+      "ratingColor": "73CF42",
+      "ratingSignals": 597,
+      "allowMenuUrlEdit": true,
+      "beenHere": {
+        "count": 0,
+        "unconfirmedCount": 0,
+        "marked": false,
+        "lastCheckinExpiredAt": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "photos": {
+        "count": 280,
+        "groups": [
+          {
+            "type": "venue",
+            "name": "Venue photos",
+            "count": 280,
+            "items": [
+              {
+                "id": "55bcf34f498e45dc0425e42b",
+                "createdAt": 1438446415,
+                "source": {
+                  "name": "Foursquare for iOS",
+                  "url": "https://foursquare.com/download/#/iphone"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/48111180_Jr_hm15x-irhn8Gm5DDFc8uDUz6ibCu1jVyKOB5muVU.jpg",
+                "width": 1440,
+                "height": 1920,
+                "user": {
+                  "id": "48111180",
+                  "firstName": "Okrim",
+                  "lastName": "N",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/48111180-ABJ1DZEFX24O4IPG.jpg"
+                  }
+                },
+                "visibility": "public"
+              }
+            ]
+          }
+        ]
+      },
+      "reasons": {
+        "count": 1,
+        "items": [
+          {
+            "summary": "Lots of people like this place",
+            "type": "general",
+            "reasonName": "rawLikesReason"
+          }
+        ]
+      },
+      "description": "Set in storied canal houses, this chic, contemporary hotel is a 6-minute walk from the Royal Palace of Amsterdam, 7 minutes' walk from the Anne Frank House and 2 km from the Van Gogh Museum. \n\nStylish rooms have quirky modern furnishings, brass chandeliers and timber floors, plus flat-screen TVs,...",
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "createdAt": 1436425040,
+      "tips": {
+        "count": 88,
+        "groups": [
+          {
+            "type": "others",
+            "name": "All tips",
+            "count": 88,
+            "items": [
+              {
+                "id": "5633c66c498e6aa75044acf9",
+                "createdAt": 1446233708,
+                "text": "Get the espresso martini. Nothing else compares.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/5633c66c498e6aa75044acf9",
+                "lang": "en",
+                "likes": {
+                  "count": 2,
+                  "groups": [
+                    {
+                      "type": "others",
+                      "count": 2,
+                      "items": [
+                        {
+                          "id": "17777",
+                          "firstName": "Boris",
+                          "lastName": "V",
+                          "photo": {
+                            "prefix": "https://fastly.4sqi.net/img/user/",
+                            "suffix": "/BZ1VKGEWDRI20HJB.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "summary": "2 likes"
+                },
+                "logView": true,
+                "agreeCount": 2,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "127827862",
+                  "firstName": "Owen",
+                  "lastName": "W",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/127827862-0JWWSUZSMOU0WV5F.jpg"
+                  }
+                },
+                "authorInteractionType": "liked"
+              }
+            ]
+          }
+        ]
+      },
+      "shortUrl": "http://4sq.com/1G8LJ5j",
+      "timeZone": "Europe/Amsterdam",
+      "listed": {
+        "count": 488,
+        "groups": [
+          {
+            "type": "others",
+            "name": "Lists from other people",
+            "count": 488,
+            "items": [
+              {
+                "id": "54f84f3b498ee0cb0b068e35",
+                "name": "Amsterdam",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "107013",
+                  "firstName": "Alex",
+                  "lastName": "L",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/107013_0zErIUUt_5-lfrDM9sO25HBBJ72nqS23ZTKKimTP6aQh0pkXQHFrTCeATwONX-n1T6rTTKu6U.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/alexlobov/list/amsterdam",
+                "canonicalUrl": "https://foursquare.com/alexlobov/list/amsterdam",
+                "createdAt": 1425559355,
+                "updatedAt": 1583105162,
+                "photo": {
+                  "id": "54cd5871498ea64892f972a8",
+                  "createdAt": 1422743665,
+                  "prefix": "https://fastly.4sqi.net/img/general/",
+                  "suffix": "/9852498_9K_mpznMYoNMLg5LrIvUFwbBm7v-rMUeibMV7f494Ik.jpg",
+                  "width": 640,
+                  "height": 640,
+                  "user": {
+                    "id": "9852498",
+                    "firstName": "Wiwi",
+                    "lastName": "K",
+                    "photo": {
+                      "prefix": "https://fastly.4sqi.net/img/user/",
+                      "suffix": "/2ETAGYWP3FRLO2T4.jpg"
+                    }
+                  },
+                  "visibility": "public"
+                },
+                "followers": {
+                  "count": 20
+                },
+                "listItems": {
+                  "count": 76,
+                  "items": [
+                    {
+                      "id": "v559e1b50498e072c8d7261a4",
+                      "createdAt": 1436716367,
+                      "photo": {
+                        "id": "55a26b54498e3858e76c5d08",
+                        "createdAt": 1436707668,
+                        "prefix": "https://fastly.4sqi.net/img/general/",
+                        "suffix": "/21607615_BMlze-mZY4IHwDRYKDlw-nakmBc93a3docVXw1q1Q-4.jpg",
+                        "width": 1920,
+                        "height": 1440,
+                        "user": {
+                          "id": "21607615",
+                          "firstName": "Geraldine",
+                          "lastName": "H",
+                          "photo": {
+                            "prefix": "https://fastly.4sqi.net/img/user/",
+                            "suffix": "/CJ13CGBM2RH4DZLI.jpg"
+                          }
+                        },
+                        "visibility": "public"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "4e4b69d1b3add19046ed23eb",
+                "name": "Favorites in Amsterdam",
+                "description": "Here's 50 places you don't want to miss.",
+                "type": "others",
+                "user": {
+                  "id": "3445",
+                  "firstName": "Robert",
+                  "lastName": "G",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/3445_5iwycawA_dR_kvHwnYvZXM9me9CHDBwdoHDT-yZ7MuEtaFBSQ7KjbugRWFsAPZ3TZWge_0yNm.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/user/3445/list/favorites-in-amsterdam",
+                "canonicalUrl": "https://foursquare.com/user/3445/list/favorites-in-amsterdam",
+                "createdAt": 1313565137,
+                "updatedAt": 1557470037,
+                "photo": {
+                  "id": "50f663e1e4b01305774434f3",
+                  "createdAt": 1358324705,
+                  "prefix": "https://fastly.4sqi.net/img/general/",
+                  "suffix": "/1360602_gqibMp7jqurUsFvGSDbtKt3LVoOxp_BPU2C6Y3vhta0.jpg",
+                  "width": 960,
+                  "height": 720,
+                  "user": {
+                    "id": "1360602",
+                    "firstName": "Peter",
+                    "lastName": "X",
+                    "photo": {
+                      "prefix": "https://fastly.4sqi.net/img/user/",
+                      "suffix": "/URQ4JTFFT523DJGL.jpg"
+                    }
+                  },
+                  "visibility": "public"
+                },
+                "followers": {
+                  "count": 27
+                },
+                "listItems": {
+                  "count": 50,
+                  "items": [
+                    {
+                      "id": "t5a53472d872f7d36726fbb12",
+                      "createdAt": 1500056563,
+                      "photo": {
+                        "id": "59f87cb4dd70c521ec525d8b",
+                        "createdAt": 1509457076,
+                        "prefix": "https://fastly.4sqi.net/img/general/",
+                        "suffix": "/488814_g06VgeWVPMktOsBWs2-4lOOf-9EYSTwkxzZ51EzvpJ4.jpg",
+                        "width": 1920,
+                        "height": 1370,
+                        "user": {
+                          "id": "488814",
+                          "firstName": "Sigward",
+                          "lastName": "M",
+                          "photo": {
+                            "prefix": "https://fastly.4sqi.net/img/user/",
+                            "suffix": "/488814_AFtFgD3U_vbA1QELlxBA7Ve7FYLUaSfbqquXm0OqCBJcaYCQhRgGcWJjM12z_Br8ugxDt3oCA.jpg"
+                          }
+                        },
+                        "visibility": "public"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "568f0456498e4b2985ae195b",
+                "name": "Amsterdam 🧀",
+                "description": "My ultimate list of things to see in Amsterdam 🙏",
+                "type": "others",
+                "user": {
+                  "id": "127827862",
+                  "firstName": "Owen",
+                  "lastName": "W",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/127827862-0JWWSUZSMOU0WV5F.jpg"
+                  }
+                },
+                "editable": true,
+                "public": true,
+                "collaborative": true,
+                "url": "/ow/list/amsterdam-",
+                "canonicalUrl": "https://foursquare.com/ow/list/amsterdam-",
+                "createdAt": 1452213334,
+                "updatedAt": 1521102547,
+                "photo": {
+                  "id": "50242c21f31cdc243cd78ebe",
+                  "createdAt": 1344547873,
+                  "prefix": "https://fastly.4sqi.net/img/general/",
+                  "suffix": "/937mVDqH53N5lpD_bmEPNq3eA5Lvnf8lTIwKmwM8VfA.jpg",
+                  "width": 1920,
+                  "height": 1200,
+                  "user": {
+                    "id": "4067091",
+                    "firstName": "Jon",
+                    "lastName": "E",
+                    "photo": {
+                      "prefix": "https://fastly.4sqi.net/img/user/",
+                      "suffix": "/LWRRU00GVU1WQ3OA.jpg"
+                    }
+                  },
+                  "visibility": "public"
+                },
+                "followers": {
+                  "count": 31
+                },
+                "listItems": {
+                  "count": 80,
+                  "items": [
+                    {
+                      "id": "v559e1b50498e072c8d7261a4",
+                      "createdAt": 1453885080
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "542ef43d498e2f8655e651d4",
+                "name": "Amsterdam",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "11764392",
+                  "firstName": "Nicole",
+                  "lastName": "F",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/11764392-TH1KOF24MFWYWLQM.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/nicole_franzen/list/amsterdam",
+                "canonicalUrl": "https://foursquare.com/nicole_franzen/list/amsterdam",
+                "createdAt": 1412363325,
+                "updatedAt": 1522544225,
+                "photo": {
+                  "id": "55defa9e498eaff1423c3de9",
+                  "createdAt": 1440676510,
+                  "prefix": "https://fastly.4sqi.net/img/general/",
+                  "suffix": "/11764392_RcWJxCV149G4Glnyf8xSRRjuObjlyag4qiqLTvtzoEc.png",
+                  "width": 592,
+                  "height": 448,
+                  "user": {
+                    "id": "11764392",
+                    "firstName": "Nicole",
+                    "lastName": "F",
+                    "photo": {
+                      "prefix": "https://fastly.4sqi.net/img/user/",
+                      "suffix": "/11764392-TH1KOF24MFWYWLQM.jpg"
+                    }
+                  },
+                  "visibility": "public"
+                },
+                "followers": {
+                  "count": 17
+                },
+                "listItems": {
+                  "count": 80,
+                  "items": [
+                    {
+                      "id": "v559e1b50498e072c8d7261a4",
+                      "createdAt": 1442191902
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "hours": {
+        "status": "Open",
+        "richStatus": {
+          "entities": [],
+          "text": "Open"
+        },
+        "isOpen": true,
+        "isLocalHoliday": false,
+        "dayData": [],
+        "timeframes": [
+          {
+            "days": "Mon–Sun",
+            "includesToday": true,
+            "open": [
+              {
+                "renderedTime": "24 Hours"
+              }
+            ],
+            "segments": []
+          }
+        ]
+      },
+      "seasonalHours": [],
+      "defaultHours": {
+        "status": "Open",
+        "richStatus": {
+          "entities": [],
+          "text": "Open"
+        },
+        "isOpen": true,
+        "isLocalHoliday": false,
+        "dayData": [],
+        "timeframes": [
+          {
+            "days": "Mon–Sun",
+            "includesToday": true,
+            "open": [
+              {
+                "renderedTime": "24 Hours"
+              }
+            ],
+            "segments": []
+          }
+        ]
+      },
+      "pageUpdates": {
+        "count": 0,
+        "items": []
+      },
+      "inbox": {
+        "count": 0,
+        "items": []
+      },
+      "attributes": {
+        "groups": [
+          {
+            "type": "payments",
+            "name": "Credit Cards",
+            "summary": "Credit Cards",
+            "count": 5,
+            "items": [
+              {
+                "displayName": "Credit Cards",
+                "displayValue": "Yes (incl. Visa & MasterCard)"
+              }
+            ]
+          },
+          {
+            "type": "wifi",
+            "name": "Wi-Fi",
+            "summary": "Wi-Fi",
+            "count": 1,
+            "items": [
+              {
+                "displayName": "Wi-Fi",
+                "displayValue": "Yes"
+              }
+            ]
+          }
+        ]
+      },
+      "bestPhoto": {
+        "id": "55bcf34f498e45dc0425e42b",
+        "createdAt": 1438446415,
+        "source": {
+          "name": "Foursquare for iOS",
+          "url": "https://foursquare.com/download/#/iphone"
+        },
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/48111180_Jr_hm15x-irhn8Gm5DDFc8uDUz6ibCu1jVyKOB5muVU.jpg",
+        "width": 1440,
+        "height": 1920,
+        "visibility": "public"
+      },
+      "colors": {
+        "highlightColor": {
+          "photoId": "55bcf34f498e45dc0425e42b",
+          "value": -15198176
+        },
+        "highlightTextColor": {
+          "photoId": "55bcf34f498e45dc0425e42b",
+          "value": -1
+        },
+        "algoVersion": 3
+      }
+    }
+  }
+}
