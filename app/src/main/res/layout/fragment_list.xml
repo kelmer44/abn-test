@@ -21,6 +21,7 @@
                 android:id="@+id/list_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/Theme.MaterialComponents.NoActionBar"
                 app:defaultQueryHint="@string/search_hint"
                 app:iconifiedByDefault="false"
                 app:queryHint="@string/search_hint" />

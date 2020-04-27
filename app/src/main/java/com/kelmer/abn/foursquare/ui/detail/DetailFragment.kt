@@ -65,10 +65,13 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         detail_toolbar.title = venue.name
 
         venue_details_description.text = venue.description
+
+        venue_details_contactinfo_phone.isVisible = venue.contactInfo.phone.isNotBlank()
         venue_details_contactinfo_phone.setText(venue.contactInfo.phone)
         venue_details_contactinfo_phone.setOnClickListener {
            callNumber(venue.contactInfo.phone)
         }
+        venue_details_contactinfo_twitter.isVisible = venue.contactInfo.twitter.isNotBlank()
         venue_details_contactinfo_twitter.setText(venue.contactInfo.twitter)
         venue_details_contactinfo_twitter.setOnClickListener {
           openUrl("https://twitter.com/${venue.contactInfo.twitter}")
@@ -76,7 +79,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         venue_details_rating.isVisible = venue.hasRating
         venue_details_rating.rating = venue.rating
         venue_details_address.text = venue.formattedAddress
-
         venue_details_gallery.setImages(venue.photos.map { GalleryImage(it.url) })
     }
 

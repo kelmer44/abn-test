@@ -12,6 +12,7 @@
         android:id="@+id/detail_appbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_appbar_height"
+        android:elevation="0dp"
         android:fitsSystemWindows="true"
         tools:visibility="visible">
 
@@ -41,6 +42,8 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/detail_toolbar"
                 style="?attr/toolbarStyle"
+                android:elevation="0dp"
+                android:foregroundTint="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
                 android:background="@android:color/transparent"
@@ -139,6 +142,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible"
                     android:layout_marginTop="@dimen/double_spacing"
                     android:background="?selectableItemBackground"
                     android:clickable="true"
@@ -154,6 +159,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible"
                     android:layout_marginTop="@dimen/single_spacing"
                     android:background="?selectableItemBackground"
                     android:clickable="true"

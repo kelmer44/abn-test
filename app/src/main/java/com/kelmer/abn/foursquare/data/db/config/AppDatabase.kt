@@ -11,7 +11,7 @@ import com.kelmer.abn.foursquare.data.db.model.VenueDetails
     entities = [
         VenueDetails::class
     ],
-    version = 1
+    version = 2
 )
 @TypeConverters(RoomTypeConverters::class)
 abstract class AppDatabase : RoomDatabase() {
