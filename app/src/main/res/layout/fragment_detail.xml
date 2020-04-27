@@ -172,16 +172,6 @@
                     tools:cv_text="@tools:sample/full_names" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/detail_error"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/detail_error"
-                />
             <include
                 android:id="@+id/shimmer_detail"
                 layout="@layout/detail_shimmer"
