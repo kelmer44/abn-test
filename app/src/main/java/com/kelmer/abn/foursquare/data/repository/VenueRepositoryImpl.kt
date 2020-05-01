@@ -31,6 +31,7 @@ class VenueRepositoryImpl(
     }
 
     override fun getVenue(id: String): Flowable<VenueDetails> {
+        val localVenue = venueDao.getVenue(id)
         val remoteVenue =
             venueApi.getVenue(id)
                 .flatMap { detail ->
@@ -43,13 +44,12 @@ class VenueRepositoryImpl(
                 }
                 .doOnSuccess {
                     venueDao.saveVenue(it)
-                }
-        val localVenue = venueDao.getVenue(id)
-        return Single.concat(
-            localVenue.doOnSuccess {
+                }.toFlowable()
+        return Flowable.merge(
+            localVenue.doOnNext {
                 Log.i("NO NETWORK", "From local $it")
             },
-            remoteVenue.doOnSuccess {
+            remoteVenue.doOnNext {
                 Log.i("NO NETWORK", "From remote $it")
             }
         )
