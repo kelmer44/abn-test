@@ -5,13 +5,13 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.kelmer.abn.foursquare.R
 import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
+import com.kelmer.abn.foursquare.common.util.observe
 import com.kelmer.abn.foursquare.data.db.model.Venue
 import com.kelmer.abn.foursquare.domain.model.LatLon
 import kotlinx.android.synthetic.main.fragment_list.*

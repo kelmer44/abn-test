@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -15,6 +14,7 @@ import com.kelmer.abn.foursquare.R
 import com.kelmer.abn.foursquare.common.glide.GlideApp
 import com.kelmer.abn.foursquare.common.resource.resolve
 import com.kelmer.abn.foursquare.common.util.handleError
+import com.kelmer.abn.foursquare.common.util.observe
 import com.kelmer.abn.foursquare.data.db.model.VenueDetails
 import com.kelmer.abn.foursquare.ui.customview.gallery.GalleryImage
 import kotlinx.android.synthetic.main.fragment_detail.*

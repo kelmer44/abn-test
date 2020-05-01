@@ -15,7 +15,7 @@ import org.koin.core.inject
 import java.net.UnknownHostException
 import java.util.concurrent.TimeUnit
 
-abstract class UseCase(private val networkInteractor: NetworkInteractor) : KoinComponent {
+abstract class UseCase(private val networkInteractor: NetworkInteractor) : IUseCase, KoinComponent {
     private var lastDisposable: Disposable? = null
     private val disposables = CompositeDisposable()
 
@@ -25,7 +25,7 @@ abstract class UseCase(private val networkInteractor: NetworkInteractor) : KoinC
         }
     }
 
-    fun dispose() {
+    override fun dispose() {
         disposables.clear()
     }
 

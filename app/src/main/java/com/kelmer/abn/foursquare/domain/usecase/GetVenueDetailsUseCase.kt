@@ -7,8 +7,14 @@ import com.kelmer.abn.foursquare.data.db.model.VenueDetails
 import com.kelmer.abn.foursquare.data.repository.VenueRepository
 import io.reactivex.Flowable
 
-open class GetVenueDetailsUseCase(private val venueRepository: VenueRepository, schedulerProvider: SchedulerProvider, networkInteractor: NetworkInteractor) :
-    ResourceFlowableUseCase<VenueDetails, GetVenueDetailsUseCase.Params>(schedulerProvider, networkInteractor = networkInteractor) {
+class GetVenueDetailsUseCase(
+    private val venueRepository: VenueRepository,
+    schedulerProvider: SchedulerProvider,
+    networkInteractor: NetworkInteractor
+) : ResourceFlowableUseCase<VenueDetails, GetVenueDetailsUseCase.Params>(
+    schedulerProvider,
+    networkInteractor = networkInteractor
+), IGetVenueDetailsUseCase {
 
     data class Params(
         val id: String
