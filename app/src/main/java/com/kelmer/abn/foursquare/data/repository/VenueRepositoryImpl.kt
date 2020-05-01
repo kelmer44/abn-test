@@ -44,7 +44,7 @@ class VenueRepositoryImpl(
                 }
                 .doOnSuccess {
                     venueDao.saveVenue(it)
-                }.toFlowable().onErrorResumeNext(localVenue)
+                }.toFlowable()
         return Flowable.merge(
             localVenue.doOnNext {
                 Log.i("NO NETWORK", "From local $it")
